@@ -66,10 +66,10 @@ EOF
 	cat <<'EOF'
 **Tool Mapping for GitHub Copilot (VS Code):**
 When superpowers skills reference tools that are not available in this environment, use these equivalents:
-- `TodoWrite` -> `manage_todo_list`
-- `Task` tool with subagents -> `runSubagent` (or `search_subagent` for codebase exploration)
-- `Skill` tool -> Read the matching skill file from `.github/skills/<skill>/SKILL.md` and follow it
-- `Read`, `Write`, `Edit`, `Bash` -> Use your native workspace tools
+- `TodoWrite` -> Keep a concise task checklist and update progress continuously
+- `Task` tool with subagents -> Use VS Code subagents/custom agents for delegation; use tool references for focused research when needed
+- `Skill` tool -> Use VS Code Agent Skills to auto-load
+- `Read`, `Write`, `Edit`, `Bash` -> Use VS Code built-in tools via `#tool:<toolName>`
 
 **Skills location:**
 Superpowers skills are in `.github/skills/`.
