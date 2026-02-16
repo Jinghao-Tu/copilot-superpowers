@@ -2,13 +2,13 @@
 
 ## Overview / 概览
 
-An installer script that migrates superpowers skills, commands, and auto-injected instructions into GitHub Copilot (VS Code) compatible formats.
+An installer script that migrates superpowers skills and auto-injected instructions into GitHub Copilot (VS Code) compatible formats.
 
-一个安装脚本，用于把 superpowers 的 skills、commands 和自动注入指令迁移为 GitHub Copilot（VS Code）兼容格式。
+一个安装脚本，用于把 superpowers 的 skills 和自动注入指令迁移为 GitHub Copilot（VS Code）兼容格式。
 
-After running, it automatically creates the required files under `.github/skills/`, `.github/prompts/`, and `.github/instructions/`.
+After running, it automatically creates the required files under `.github/skills/` and `.github/instructions/`.
 
-执行后，它会自动在 `.github/skills/`、`.github/prompts/` 和 `.github/instructions/` 下生成所需文件。
+执行后，它会自动在 `.github/skills/` 和 `.github/instructions/` 下生成所需文件。
 
 ## Quick Start / 快速开始
 
