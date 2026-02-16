@@ -59,9 +59,6 @@ for file in "$SUPERPOWERS_DIR"/commands/*.md; do
 		next
 	}
 	in_frontmatter {
-		if ($0 ~ /^disable-model-invocation:[[:space:]]*/) {
-			next
-		}
 		if ($0 ~ /^name:[[:space:]]*/) {
 			name_line = $0
 			next
