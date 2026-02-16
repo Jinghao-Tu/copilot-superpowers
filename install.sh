@@ -65,7 +65,7 @@ EOF
 
 	cat <<'EOF'
 **Tool Mapping for GitHub Copilot (VS Code):**
-Use VS Code Agent Skills for automatic skill loading and `/skill-name` for manual invocation.
+Use VS Code Agent Skills for automatic skill loading
 Use VS Code built-in tools directly when required.
 
 **Skills location:**
