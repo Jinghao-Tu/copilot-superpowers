@@ -5,9 +5,10 @@ set -euo pipefail
 REPO_URL="https://github.com/obra/superpowers.git"
 ELEMENTS_OF_STYLE_REPO_URL="https://github.com/obra/the-elements-of-style.git"
 TMP_DIR="$(mktemp -d)"
+TARGET_DIR=".github"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
-mkdir -p .github/skills .github/instructions
+mkdir -p $TARGET_DIR/skills $TARGET_DIR/instructions
 
 git clone "$REPO_URL" "$TMP_DIR/superpowers"
 SUPERPOWERS_DIR="$TMP_DIR/superpowers"
@@ -15,11 +16,11 @@ SUPERPOWERS_DIR="$TMP_DIR/superpowers"
 git clone "$ELEMENTS_OF_STYLE_REPO_URL" "$TMP_DIR/the-elements-of-style"
 ELEMENTS_OF_STYLE_DIR="$TMP_DIR/the-elements-of-style"
 
-cp -ar "$SUPERPOWERS_DIR/skills/." .github/skills/
+cp -ar "$SUPERPOWERS_DIR/skills/." $TARGET_DIR/skills/
 
 ELEMENTS_STYLE_SKILL_DIR="$ELEMENTS_OF_STYLE_DIR/skills/writing-clearly-and-concisely"
 if [ -d "$ELEMENTS_STYLE_SKILL_DIR" ]; then
-	cp -ar "$ELEMENTS_STYLE_SKILL_DIR" .github/skills/
+	cp -ar "$ELEMENTS_STYLE_SKILL_DIR" $TARGET_DIR/skills/
 else
 	echo "Warning: writing-clearly-and-concisely skill not found in the-elements-of-style repo" >&2
 fi
@@ -72,4 +73,4 @@ Use VS Code built-in tools directly when required.
 Superpowers skills are in `.github/skills/`.
 </EXTREMELY_IMPORTANT>
 EOF
-} > .github/instructions/superpowers.instructions.md
+} > $TARGET_DIR/instructions/superpowers.instructions.md
